@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+        integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+    <script src="http://127.0.0.1:5500/MyHelper.js"></script>
+    <style>
+
+    </style>
+</head>
+
+<body>
+
+
+
+
+    <select name="cities" id="cities">
+        <option value="">---請選擇縣市---</option>
+        <option value="taipei">台北</option>
+        <option value="taoyuan">桃園</option>
+        <option value="taichung">台中</option>
+    </select>
+
+
+
+
+
+    <select name="district" id="district">
+        <option value="">---請選擇行政區---</option>
+        <option value="taipei01">中正區</option>
+        <option value="taipei02">萬華區</option>
+        <option value="taipei03">信義區</option>
+    </select>
+
+
+
+
+
+
+
+    <script>
+        function GetAddressJSON(url) {
+            fetch("http://127.0.0.1:5500/TaiwanAddress_Simple.json")
+                .then(response => response.text())
+                .then(text => {
+                    console.log(typeof text);
+                    console.log(text);
+                })
+                .catch(ex => {
+                    
+                })
+        }
+
+
+
+
+
+
+      
+    </script>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
+        integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
